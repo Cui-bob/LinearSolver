@@ -24,164 +24,12 @@ namespace LinearSolver
         public const int FOUND_ENTERING_VARIABLE = 1;
 
 
-
-        /* insert: To insert a new double to a existing array and extend its length by 1.
-         * Input: srcArray - The source array that will be inserted in.  newData - the double number that will be inserted.
-         * Return: the new array that contains the new double as its last element.
-         */
-        //public static double[] insert(double[] srcArray, double newData)
-        //{
-        //    if (srcArray == null)
-        //    {
-        //        return null;
-        //    }
-        //    double[] newArray = new double[srcArray.Length + 1];
-        //    for (int i = 0; i < srcArray.Length; i++)
-        //    {
-        //        newArray[i] = srcArray[i];
-        //    }
-        //    newArray[newArray.Length - 1] = newData;
-        //    return newArray;
-        //}
-
-        ///* insert: To insert a new Equation to a existing array and extend its length by 1.
-        // * Input: srcArray - The source array that will be inserted in.  newData - the Equation that will be inserted.
-        // * Return: the new array that contains the new Equation as its last element.
-        // */
-        //public static Equation[] insert(Equation[] srcArray, Equation newData)
-        //{
-        //    if (srcArray == null)
-        //    {
-        //        return null;
-        //    }
-        //    Equation[] newArray = new Equation[srcArray.Length + 1];
-        //    for (int i = 0; i < srcArray.Length; i++)
-        //    {
-        //        newArray[i] = srcArray[i];
-        //    }
-        //    newArray[newArray.Length - 1] = newData;
-        //    return newArray;
-        //}
-
-        ///* insert: To insert a new Object to a existing array and extend its length by 1.
-        // * Input: srcArray - The source array that will be inserted in.  newData - the Object that will be inserted.
-        // * Return: the new array that contains the new Object as its last element.
-        // */
-        //public static Object[] insert(Object[] srcArray, Object newData)
-        //{
-        //    if (srcArray == null)
-        //    {
-        //        return null;
-        //    }
-        //    Object[] newArray = new Object[srcArray.Length + 1];
-        //    for (int i = 0; i < srcArray.Length; i++)
-        //    {
-        //        newArray[i] = srcArray[i];
-        //    }
-        //    newArray[newArray.Length - 1] = newData;
-        //    return newArray;
-        //}
-
-        ///* insert: To insert a new string to a existing string array and extend its length by 1.
-        // * Input: srcArray - The source array that will be inserted in.  newData - the string that will be inserted.
-        // * Return: the new array that contains the new string as its last element.
-        // */
-        //public static String[] insert(String[] srcArray, String newData)
-        //{
-        //    if (srcArray == null)
-        //    {
-        //        return null;
-        //    }
-        //    String[] newArray = new String[srcArray.Length + 1];
-        //    for (int i = 0; i < srcArray.Length; i++)
-        //    {
-        //        newArray[i] = srcArray[i];
-        //    }
-        //    newArray[newArray.Length - 1] = newData;
-        //    return newArray;
-        //}
-
-        ///* removeFrom: remove an indexed data from the source array and shorten the array length by 1
-        // * Input: srcArray - the source array index - the index that the data on that position will be removed.
-        // * Return: The new array without certain data
-        // */
-        //public static double[] removeFrom(double[] srcArray, int index)
-        //{
-        //    if (srcArray == null)
-        //    {
-        //        return null;
-        //    }
-        //    if (srcArray.Length <= index)
-        //    {
-        //        return null;
-        //    }
-        //    double[] newArray = new double[srcArray.Length - 1];
-        //    for (int i = 0; i < index; i++)
-        //    {
-        //        newArray[i] = srcArray[i];
-        //    }
-        //    for (int i = index; i < newArray.Length; i++)
-        //    {
-        //        newArray[i] = srcArray[i + 1];
-        //    }
-        //    return newArray;
-        //}
-
-        ///* removeFrom: remove an indexed data from the source array and shorten the array length by 1
-        // * Input: srcArray - the source array index - the index that the data on that position will be removed.
-        // * Return: The new array without certain data
-        // */
-        //public static String[] removeFrom(String[] srcArray, int index)
-        //{
-        //    if (srcArray == null)
-        //    {
-        //        return null;
-        //    }
-        //    if (srcArray.Length <= index)
-        //    {
-        //        return null;
-        //    }
-        //    String[] newArray = new String[srcArray.Length - 1];
-        //    for (int i = 0; i < index; i++)
-        //    {
-        //        newArray[i] = srcArray[i];
-        //    }
-        //    for (int i = index; i < newArray.Length; i++)
-        //    {
-        //        newArray[i] = srcArray[i + 1];
-        //    }
-        //    return newArray;
-        //}
-
-        ///* removeFrom: remove an indexed data from the source array and shorten the array length by 1
-        // * Input: srcArray - the source array index - the index that the data on that position will be removed.
-        // * Return: The new array without certain data
-        // */
-        //public static Equation[] removeFrom(Equation[] srcArray, int index)
-        //{
-        //    if (srcArray == null)
-        //    {
-        //        return null;
-        //    }
-        //    if (srcArray.Length <= index)
-        //    {
-        //        return null;
-        //    }
-        //    Equation[] newArray = new Equation[srcArray.Length - 1];
-        //    for (int i = 0; i < index; i++)
-        //    {
-        //        newArray[i] = srcArray[i];
-        //    }
-        //    for (int i = index; i < newArray.Length; i++)
-        //    {
-        //        newArray[i] = srcArray[i + 1];
-        //    }
-        //    return newArray;
-        //}
-        //TODO: update the comments
-        /* removeFrom: remove an indexed data from the source array and shorten the array length by 1
-         * Input: srcArray - the source array index - the index that the data on that position will be removed.
-         * Return: The new array without certain data
+        /* removeFrom: To remove a element in a specified location from a given array.
+         * Use geneic to make to method supports different type of inout Object.
+         * Input: 
+         *      T[] srcArray: The given array that an element will be removed from.
+         *      T index: The specified index that the element in this location will be removed.
+         * Return: A T[] array without certain element and length is shortened by 1
          */
         public static T[] removeFrom<T>(T[] srcArray, int index)
         {
@@ -205,6 +53,29 @@ namespace LinearSolver
             return newArray;
         }
 
+        /* removeFrom: remove the given Object from the array.
+         * Input:
+         *      T[] srcArray: Source array.
+         *      T srcObject: The given Object.
+         * Return: a new array without the given Object, or the original array
+         * if there is no such a object in the array.
+         */ 
+        public static T[] removeFrom<T>(T[] srcArray, T srcObject)
+        {
+            if (srcArray == null)
+            {
+                return null;
+            }
+            for (int i = 0; i < srcArray.Length; i++)
+            {
+                if (srcArray[i].Equals(srcObject))
+                {
+                    return removeFrom<T>(srcArray,i);
+                }
+            }
+            return srcArray;
+        }
+
         /* insert<T>: To insert a <T> Object to the end of a <T[]> array. 
          * Use Generic to make the methods support different type of Object.
          * Input: 
@@ -226,5 +97,6 @@ namespace LinearSolver
             newArray[newArray.Length - 1] = newData;
             return newArray;
         }
+
     }
 }
