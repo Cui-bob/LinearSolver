@@ -1,0 +1,10 @@
+﻿<Application x:Class="LinearSolverUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="LinearSolverUI.xaml">
+    <Application.Resources>
+        <Style x:Key="StrVar">
+            <Setter Property="TextElement.FontFamily" Value="./fonts/StrVar.ttf#String Variable" />
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSolverUI", "LinearSolverUI\LinearSolverUI.csproj", "{AA8CFBF1-7C3E-4F7E-9D74-C820ED685EB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearSolver", "..\Equation\LinearSolver\LinearSolver.csproj", "{1B8CDDE2-06AA-49EF-AEB9-AA4685FABE2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestPro", "..\Equation\TestPro\TestPro.csproj", "{6D66C957-7DF1-413D-A8D8-11065F11898D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA8CFBF1-7C3E-4F7E-9D74-C820ED685EB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8CFBF1-7C3E-4F7E-9D74-C820ED685EB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8CFBF1-7C3E-4F7E-9D74-C820ED685EB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8CFBF1-7C3E-4F7E-9D74-C820ED685EB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B8CDDE2-06AA-49EF-AEB9-AA4685FABE2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B8CDDE2-06AA-49EF-AEB9-AA4685FABE2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B8CDDE2-06AA-49EF-AEB9-AA4685FABE2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B8CDDE2-06AA-49EF-AEB9-AA4685FABE2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D66C957-7DF1-413D-A8D8-11065F11898D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D66C957-7DF1-413D-A8D8-11065F11898D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D66C957-7DF1-413D-A8D8-11065F11898D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D66C957-7DF1-413D-A8D8-11065F11898D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

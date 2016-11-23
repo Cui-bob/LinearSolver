@@ -1,0 +1,20 @@
+﻿<Window x:Class="LinearSolverUI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="LinearSolver" Height="600" Width="800" ResizeMode="NoResize" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" Closing="Window_Closing_1">
+    <Grid x:Name="mainContainer" Margin="0">
+        <ListBox x:Name="equList" HorizontalAlignment="Left" Height="300" Margin="50,70,0,0" VerticalAlignment="Top" Width="325" Visibility="Hidden"/>
+        <TextBox x:Name="equBox" Height="25" Margin="100,30,100,0" TextWrapping="Wrap" VerticalAlignment="Top" BorderThickness="0,0,0,1" LostFocus="equBox_LostFocus" KeyUp="equBox_KeyUp" GotFocus="equBox_GotFocus" TextDecorations="{x:Null}" VerticalContentAlignment="Bottom" Text="Type Your Equation Here" Foreground="LightGray" HorizontalContentAlignment="Center" KeyDown="equBox_KeyDown"/>
+        <Button x:Name="newCstBt" Content="New Constraints" Margin="342,70,0,0" VerticalAlignment="Top" Width="110" Height="20" Click="newCstBt_Click" BorderThickness="1" Background="White" HorizontalAlignment="Left" />
+        <Button x:Name="slvBt" Content="Solve" HorizontalAlignment="Left" Margin="272,392,0,0" VerticalAlignment="Top" Width="75" Click="slvBt_Click" BorderBrush="Black" Foreground="Black" Background="White"/>
+        <Button x:Name="slvStpBt" Content="Solve by Step" HorizontalAlignment="Left" Margin="472,392,0,0" VerticalAlignment="Top" Width="98" Click="slvStpBt_Click" Background="White" BorderBrush="Black" Foreground="Black"/>
+        <CheckBox x:Name="isObj" Content="Objetive Function" HorizontalAlignment="Left" Margin="336,101,0,0" VerticalAlignment="Top" Width="125" Height="20" BorderThickness="1" Padding="0" IsChecked="True"/>
+        <Label Content="Objective Function: " HorizontalAlignment="Left" Margin="135,131,0,0" VerticalAlignment="Top" Width="139" HorizontalContentAlignment="Right"/>
+        <Label Content="Constraint(s): " HorizontalAlignment="Left" Margin="135,159,0,0" VerticalAlignment="Top" Width="139" HorizontalContentAlignment="Right"/>
+        <ScrollViewer x:Name="srcollViewer" HorizontalAlignment="Left" Height="250" Margin="272,131,0,0" VerticalAlignment="Top" Width="300" PanningMode="Both"/>
+        <TextBlock x:Name="noticeLb" HorizontalAlignment="Left" Margin="135,426,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="52" Width="560" TextAlignment="Center"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="698,543,0,0" VerticalAlignment="Top" Width="75" Background="Red" BorderBrush="Black" Click="Reset_Click"/>
+        <Label x:Name="enterNoticeLb" Content="Press [ENTER] to submit" HorizontalAlignment="Left" Margin="322,10,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FFC6C6C6" Visibility="Hidden"/>
+
+    </Grid>
+</Window>
