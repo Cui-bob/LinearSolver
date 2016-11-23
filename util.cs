@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+ 
 namespace LinearSolver
 {
     /*
@@ -21,7 +21,10 @@ namespace LinearSolver
         public const int LARGERTHAN_EQUALTO = 5;
 
         //These constants integer are indicates the state of current processing.
+        public const int FORMAT_EQUATION = 0;
         public const int FOUND_ENTERING_VARIABLE = 1;
+        public const int FOUND_PIVOT_ELEMENT = 2;
+        public const int CALCULATING = 3;
 
 
         /* removeFrom: To remove a element in a specified location from a given array.

@@ -36,7 +36,8 @@ namespace LinearSolver
             bool afterFloat=false; // Indicates that if a float is detected or not
             bool isRHS = false; // Indicates that if a equality or inequality is detected so the following is the right hand side of the function
             String tmpVariable = ""; 
-            double? tmpNumber = null; 
+            double? tmpNumber = null;
+            int numOfAfterFloat = 0;
 
             // Check the type of the function
             if (equStr.IndexOf(">=") != -1)
@@ -138,6 +139,8 @@ namespace LinearSolver
                                 }
                                 rHS += (double)tmpNumber;
                                 tmpNumber = null;
+                                afterFloat = false;
+                                numOfAfterFloat = 0;
                             }
                             else
                             {
@@ -150,6 +153,7 @@ namespace LinearSolver
                         }
                         break;
                     case 'x':
+                    case 'X':
                         if (tmpNumber == null)
                         {
                             tmpNumber = 1;
@@ -159,6 +163,8 @@ namespace LinearSolver
                             }
                             coefficient = util.insert(coefficient, (double)tmpNumber);
                             tmpNumber = null;
+                            afterFloat = false;
+                            numOfAfterFloat = 0;
                         }
                         else
                         {
@@ -168,6 +174,8 @@ namespace LinearSolver
                             }
                             coefficient = util.insert(coefficient, (double)tmpNumber);
                             tmpNumber = null;
+                            afterFloat = false;
+                            numOfAfterFloat = 0;
                         }
                         isVariableIndex = true;
                         tmpVariable = "x";
@@ -203,7 +211,7 @@ namespace LinearSolver
                                 }
                                 else
                                 {
-                                    tmpNumber = tmpNumber + (double)(equCharArray[i] - 48) / 10;
+                                    tmpNumber = tmpNumber + (((double)(equCharArray[i] - 48)) / Math.Pow(10,(1+(numOfAfterFloat++))));
                                 }
                             }
                         }
